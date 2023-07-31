@@ -1,5 +1,5 @@
 use cw_prb_math::{
-    common::{exp10, muldiv, muldiv18},
+    exp10, muldiv, muldiv18,
     ud60x18::{constants::UNIT, mul},
 };
 use cosmwasm_std::{Decimal256, StdResult, Uint256};

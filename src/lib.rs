@@ -3,11 +3,13 @@
 
 #[cfg(feature = "ethnum")]
 pub use ethnum::*;
+pub use common::*;
+pub use asm::Asm;
 
-pub mod common;
 pub mod sd59x18;
 pub mod ud60x18;
 
+mod common;
 mod asm;
 pub(crate) mod tens;
 
