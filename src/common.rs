@@ -8,8 +8,15 @@ use crate::{
 use cosmwasm_std::{DivideByZeroError, OverflowError, OverflowOperation, StdError, StdResult};
 use primitive_types::U512;
 use std::ops::Not;
-
 use ethnum::U256;
+
+pub fn convert_to_u256_array<I>(x: I) -> Vec<U256>
+where
+    I: IntoIterator,
+    I::Item: Copy + Into<U256>,
+{
+    x.into_iter().map(|x| x.into()).collect()
+}
 
 /// Finds whether or not some Uint256 is odd.
 pub fn is_odd(x: U256) -> bool {
