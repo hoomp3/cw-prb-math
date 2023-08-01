@@ -3,6 +3,7 @@
 //!
 pub mod constants;
 
+mod fp;
 use super::{asm::Asm, common, tens::*};
 use crate::common::{msb, muldiv, muldiv18};
 pub use constants::*;

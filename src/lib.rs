@@ -1,18 +1,20 @@
 //! Math library for advanced fixed-point math that works with numbers which are considered to have 18 trailing decimals.
 //! Uses U256 and I256 from ethnum since cosmwasm-std numbers don't offer the same functionality as U256 and I256.
 
+pub use asm::Asm;
+pub use common::*;
 #[cfg(feature = "ethnum")]
 pub use ethnum::*;
-pub use common::*;
-pub use asm::Asm;
+pub use fp::FixedPoint;
 
 pub mod sd59x18;
 pub mod ud60x18;
 
-mod common;
 mod asm;
+mod common;
 pub(crate) mod tens;
 
+mod fp;
 #[cfg(test)]
 mod tests;
 
