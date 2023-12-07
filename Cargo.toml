@@ -21,7 +21,7 @@ testing = ["arbitrary"]
 cosmwasm-std = { version = "1.5", default-features = true }
 cosmwasm-schema = "1.5"
 
-ethnum = { git = "https://github.com/hoomp3/ethnum-rs", branch = "cosmwasm", features = ["cosmos"] }
+ethnum = { git = "https://github.com/hoomp3/ethnum-rs", branch = "cosmwasm", features = ["cosmos", "serde"] }
 primitive-types = { version = "0.12.1", default-features = false }
 schemars = "0.8.12"
 serde = { version = "1.0.158", default-features = false, features = ["derive"] }
